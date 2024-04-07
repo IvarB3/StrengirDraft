@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="466.0" spacing="20.0" style="-fx-background-color: #99C4BD;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.strengir.StrengirController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <HBox fx:id="fxhbox1" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <TextField fx:id="fxTxtSearch" alignment="TOP_LEFT" prefHeight="57.0" prefWidth="267.0" promptText="Leita að orði" />
+
+        <Label fx:id="fxLblCount" alignment="CENTER" prefHeight="57.0" prefWidth="57.0" style="-fx-border-color: black;" />
+        <Button fx:id="fxbutton1" onAction="#onLeit" prefHeight="68.0" prefWidth="105.0" text="Leita" />
+      </children>
+   </HBox>
+   <HBox fx:id="fxhbox2" prefHeight="202.0" prefWidth="426.0">
+      <children>
+         <TextArea fx:id="fxTextArea1" prefHeight="93.0" prefWidth="324.0" promptText="Sláðu inn texta" />
+         <Button fx:id="fxbutton2" mnemonicParsing="false" onAction="#onVistaTexta" prefHeight="167.0" prefWidth="104.0" text="Vista" />
+      </children>
+   </HBox>
+   <HBox fx:id="fxbutton3" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="fxLabelFjoldi" alignment="CENTER" prefHeight="59.0" prefWidth="324.0" style="-fx-border-color: black;" />
+         <Button fx:id="fxbutton3" mnemonicParsing="false" onAction="#onTeljaOrd" prefHeight="59.0" prefWidth="101.0" text="Telja orð" />
+      </children>
+   </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <TextField alignment="TOP_LEFT" prefHeight="40.0" prefWidth="323.0" promptText="Refactora orðið sem leitað var að" />
+         <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="104.0" text="Breyta" />
+      </children>
+   </HBox>
+</VBox>
