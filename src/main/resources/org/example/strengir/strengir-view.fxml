@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="CENTER" prefHeight="360.0" prefWidth="467.0" spacing="20.0" style="-fx-background-color: #99C4BD;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.strengir.StrengirController">
-    <fx:include fx:id="menuStyring" source="menu-view.fxml" />
    <HBox fx:id="fxhbox1" prefHeight="100.0" prefWidth="200.0">
       <children>
 
