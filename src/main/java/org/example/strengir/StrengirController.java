@@ -12,7 +12,7 @@ public class StrengirController {
     private Label fxLblCount;
 
     @FXML
-    private TextField fxTxtSearch;
+    private TextField fxTxtSearch, fxTxtRefactor;
 
     @FXML
     private TextArea fxTextArea1;
@@ -58,6 +58,18 @@ public class StrengirController {
     public void onVistaTexta(ActionEvent actionEvent) {
         String langiText = fxTextArea1.getText();
         strengir.setTexti(langiText);
+    }
+
+    @FXML
+    public void onRefactor(ActionEvent actionEvent) {
+        String searchWord = fxTxtSearch.getText();
+        String replaceWord = fxTxtRefactor.getText();
+
+        if (!searchWord.isEmpty() && !replaceWord.isEmpty()) {
+            String currentText = fxTextArea1.getText();
+            String updatedText = currentText.replace(searchWord, replaceWord);
+            fxTextArea1.setText(updatedText);
+        }
     }
 
 
