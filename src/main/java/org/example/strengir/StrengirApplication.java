@@ -12,7 +12,7 @@ public class StrengirApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StrengirApplication.class.getResource("strengir-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 450, 300);
-        stage.setTitle("Strengir!");
+        stage.setTitle("Strengir, text helper!");
         stage.setScene(scene);
         stage.show();
     }

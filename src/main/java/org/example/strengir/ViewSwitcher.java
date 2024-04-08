@@ -8,12 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 public class ViewSwitcher {
 
-
-
-
-
-
-
         private static final Map<View, Parent> cache = new HashMap<>();
 
         // viðbót fyrir controllers
