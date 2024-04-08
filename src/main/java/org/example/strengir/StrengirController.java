@@ -113,6 +113,24 @@ public class StrengirController {
         return highlightedText;
     }
 
+    @FXML
+    private Label fxLblWordCount;
+
+    @FXML
+    public void onWordCount(ActionEvent actionEvent) {
+        String text = fxTextArea1.getText().trim();
+
+        if (text.isEmpty()) {
+            fxLblWordCount.setText("0");
+            return;
+        }
+
+        String[] words = text.split("\\s+");
+        int wordCount = words.length;
+
+        fxLblWordCount.setText(String.valueOf(wordCount));
+    }
+
 
 
 
