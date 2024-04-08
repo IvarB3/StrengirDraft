@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="360.0" prefWidth="467.0" spacing="20.0" style="-fx-background-color: #99C4BD;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.strengir.StrengirController">
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="467.0" spacing="20.0" style="-fx-background-color: #99C4BD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.strengir.StrengirController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="fxAskrifandi" mnemonicParsing="false" onAction="#onLogin" text="Áskrifandi" />
+         <Button mnemonicParsing="false" text="Um forritið" />
+      </children>
+   </HBox>
+
    <HBox fx:id="fxhbox1" prefHeight="100.0" prefWidth="200.0">
       <children>
-
          <TextField fx:id="fxTxtSearch" alignment="TOP_LEFT" prefHeight="57.0" prefWidth="267.0" promptText="Leita að orði" />
+
         <Label fx:id="fxLblCount" alignment="CENTER" prefHeight="57.0" prefWidth="57.0" style="-fx-border-color: black;" />
         <Button fx:id="fxbutton1" onAction="#onLeit" prefHeight="68.0" prefWidth="105.0" text="Leita" />
       </children>
@@ -25,13 +39,10 @@
          <Button fx:id="fxbutton3" mnemonicParsing="false" onAction="#onTeljaOrd" prefHeight="59.0" prefWidth="101.0" text="Telja orð" />
       </children>
    </HBox>
-    <HBox prefHeight="100.0" prefWidth="200.0">
-        <children>
-            <TextField fx:id="fxTxtRefactor" alignment="TOP_LEFT" prefHeight="40.0" prefWidth="323.0" promptText="Refactora orðið sem leitað var að" />
-            <Button fx:id="fxBtnRefactor" mnemonicParsing="false" onAction="#onRefactor" prefHeight="44.0" prefWidth="104.0" text="Breyta" />
-        </children>
-    </HBox>
-    <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-  </padding>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <TextField alignment="TOP_LEFT" prefHeight="40.0" prefWidth="323.0" promptText="Refactora orðið sem leitað var að" />
+         <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="104.0" text="Breyta" />
+      </children>
+   </HBox>
 </VBox>

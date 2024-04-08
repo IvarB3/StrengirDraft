@@ -2,12 +2,18 @@ package org.example.strengir;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import vinnsla.Askrifandi;
 import vinnsla.Strengir;
 
+import java.util.Optional;
+
+
 public class StrengirController {
+
     @FXML
     private Label fxLblCount;
 
@@ -20,7 +26,12 @@ public class StrengirController {
     @FXML
     private Label fxLabelFjoldi;
 
+
+    @FXML
+    protected Button fxAskrifandi;
+
     private Strengir strengir = new Strengir();
+    public static final String ASKRIFANDI = "Áskrifandi";
 
     @FXML
     public void onLeit(ActionEvent actionEvent) {
@@ -71,6 +82,16 @@ public class StrengirController {
             fxTextArea1.setText(updatedText);
         }
     }
+    public void onLogin(ActionEvent actionEvent) {
+        // býr til nýjan dialog með tómum áskrifanda
+        AskrifandiDialog dialog = new AskrifandiDialog(new Askrifandi(ASKRIFANDI));
+        // sýndu dialoginn
+        Optional<Askrifandi> utkoma = dialog.showAndWait();
+        // Ef fékkst svar úr dialognum setjum við nafnið á áskrifandanum í notendaviðmótið
+        utkoma.ifPresent (a -> {
+            fxAskrifandi.setText(a.getNafn());});
+    }
+
 
 
 }
