@@ -83,14 +83,36 @@ public class StrengirController {
         }
     }
     public void onLogin(ActionEvent actionEvent) {
-        // býr til nýjan dialog með tómum áskrifanda
         AskrifandiDialog dialog = new AskrifandiDialog(new Askrifandi(ASKRIFANDI));
-        // sýndu dialoginn
         Optional<Askrifandi> utkoma = dialog.showAndWait();
-        // Ef fékkst svar úr dialognum setjum við nafnið á áskrifandanum í notendaviðmótið
         utkoma.ifPresent (a -> {
             fxAskrifandi.setText(a.getNafn());});
     }
+
+    @FXML
+    private Button fxBtnHighlight;
+
+    @FXML
+    public void onHighlightSearchResults(ActionEvent actionEvent) {
+        String searchWord = fxTxtSearch.getText();
+        if (searchWord.isEmpty()) {
+            return;
+        }
+
+        String text = fxTextArea1.getText();
+        String highlightedText = highlightText(text, searchWord);
+        fxTextArea1.setText(highlightedText);
+    }
+
+    private String highlightText(String text, String searchWord) {
+        final String highlightStart = "**"; // Start highlight
+        final String highlightEnd = "**"; // End highlight
+
+        String highlightedText = text.replaceAll(searchWord, highlightStart + searchWord + highlightEnd);
+
+        return highlightedText;
+    }
+
 
 
 
