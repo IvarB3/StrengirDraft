@@ -2,13 +2,19 @@ package org.example.strengir;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import vinnsla.Askrifandi;
 import vinnsla.Strengir;
 
+import java.io.IOException;
 import java.util.Optional;
 
 
@@ -131,7 +137,25 @@ public class StrengirController {
         fxLblWordCount.setText(String.valueOf(wordCount));
     }
 
+    @FXML
+    private void onInfo(ActionEvent event) {
+        try {
+            // Load the FXML file for the umforrit-view
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("umforrit-view.fxml"));
+            Parent umforritViewRoot = loader.load();
 
+            // Get the current stage (window) using the event's source
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+            // Optional: If you have specific setup to do with InfoController, you can do it here
+            // InfoController controller = loader.getController();
 
+            // Set the new scene on the current stage
+            Scene scene = new Scene(umforritViewRoot);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace(); // Or handle the exception as you see fit
+        }
+    }
 }

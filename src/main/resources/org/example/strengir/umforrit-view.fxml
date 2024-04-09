@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.strengir.InfoController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="How to Use the Project:" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    <Label text="1. " wrapText="true" />
+    <Label text="2. Navigate to the main screen to access the primary features." wrapText="true" />
+    <Label text="3. Select any of the features from the list to start using them." wrapText="true" />
+    <Label text="4. Follow on-screen instructions for each feature to utilize them effectively." wrapText="true" />
+    <Label text="5. Access the 'Help' section for detailed guides on each feature." wrapText="true" />
+    <Button text="Close" onAction="#handleCloseButtonAction"/>
+</VBox>
