@@ -24,3 +24,5 @@ Hér má finna leiðbeiningar um hvernig forritið virkar.
 6. Til þess að telja orðið sem að þú breyttir/leitaðir að þá þarf að ýta á 'Telja Orð'
 7. Til að skrá sig inn þarf að ýta á 'Áskrifandi' þá ætti að poppa upp log in flipi sem að fylla þarf í
 
+## Höfundir
+BFN03 og IvarB3
