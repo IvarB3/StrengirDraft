@@ -17,5 +17,6 @@
     <Label text="3. Ef að þú vilt highlighta orðið þá þarf að ýta á 'Sýna'" wrapText="true" />
     <Label text="4. Til þess að breyta orði þá þarf fyrst að fylgja skrefum 1 og 2, skrifa nýja orðið í viðeigandi reit og ýta á 'Breyta'" wrapText="true" />
     <Label text="5. Til þess að fá orðafjölda þá þarf að vista textan og ýta á 'Word Count'"/>
+    <Label text="6. Til þess að telja orðið sem að þú breyttir/leitaðir að þá þarf að ýta á 'Telja Orð'"/>
     <Button text="Close" onAction="#handleCloseButtonAction"/>
 </VBox>

@@ -40,7 +40,7 @@
    <HBox fx:id="fxbutton3" prefHeight="100.0" prefWidth="200.0">
       <children>
          <Label fx:id="fxLabelFjoldi" alignment="CENTER" prefHeight="59.0" prefWidth="324.0" style="-fx-border-color: black;" />
-         <Button fx:id="fxbutton3" mnemonicParsing="false" onAction="#onTeljaOrd" prefHeight="59.0" prefWidth="101.0" text="Telja orð" />
+         <Button fx:id="fxbutton3" mnemonicParsing="false" onAction="#onTeljaOrd" prefHeight="59.0" prefWidth="101.0" text="Telja Orð" />
       </children>
    </HBox>
     <HBox prefHeight="100.0" prefWidth="200.0">
