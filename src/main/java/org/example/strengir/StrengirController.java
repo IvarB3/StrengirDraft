@@ -40,7 +40,7 @@ public class StrengirController {
     public static final String ASKRIFANDI = "Áskrifandi";
 
     @FXML
-    public void onLeit(ActionEvent actionEvent) {
+    public void onLeit() {
         String leitarstrengur = fxTxtSearch.getText();
 
         if (leitarstrengur.isEmpty()) {
@@ -65,20 +65,22 @@ public class StrengirController {
     }
 
     @FXML
-    public void onTeljaOrd(ActionEvent actionEvent) {
+    public void onTeljaOrd() {
         String stuttiText = fxTxtSearch.getText();
         int fjoldi = strengir.fjoldiOrda(stuttiText);
         fxLabelFjoldi.setText(String.valueOf(fjoldi));
     }
 
+    //Vista texta
     @FXML
-    public void onVistaTexta(ActionEvent actionEvent) {
+    public void onVistaTexta() {
         String langiText = fxTextArea1.getText();
         strengir.setTexti(langiText);
     }
 
+    //Refactora orð
     @FXML
-    public void onRefactor(ActionEvent actionEvent) {
+    public void onRefactor() {
         String searchWord = fxTxtSearch.getText();
         String replaceWord = fxTxtRefactor.getText();
 
@@ -88,18 +90,16 @@ public class StrengirController {
             fxTextArea1.setText(updatedText);
         }
     }
-    public void onLogin(ActionEvent actionEvent) {
+    public void onLogin() {
         AskrifandiDialog dialog = new AskrifandiDialog(new Askrifandi(ASKRIFANDI));
         Optional<Askrifandi> utkoma = dialog.showAndWait();
         utkoma.ifPresent (a -> {
             fxAskrifandi.setText(a.getNafn());});
     }
 
+    //Highlighta orð
     @FXML
-    private Button fxBtnHighlight;
-
-    @FXML
-    public void onHighlightSearchResults(ActionEvent actionEvent) {
+    public void onHighlightSearchResults() {
         String searchWord = fxTxtSearch.getText();
         if (searchWord.isEmpty()) {
             return;
@@ -122,8 +122,9 @@ public class StrengirController {
     @FXML
     private Label fxLblWordCount;
 
+    //Word Count
     @FXML
-    public void onWordCount(ActionEvent actionEvent) {
+    public void onWordCount() {
         String text = fxTextArea1.getText().trim();
 
         if (text.isEmpty()) {
