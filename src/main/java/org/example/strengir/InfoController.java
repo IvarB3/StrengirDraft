@@ -14,16 +14,16 @@ public class InfoController {
     @FXML
     private void handleCloseButtonAction(ActionEvent event) {
         try {
-            // Load the original FXML file for the strengir-view
+            // Hleður upp strengir-view
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/strengir/strengir-view.fxml"));
             Parent strengirViewRoot = loader.load();
 
-            // Switch back to the original scene
+            // Fer aftur á forsíðu
             Scene scene = new Scene(strengirViewRoot);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
         } catch (IOException e) {
-            e.printStackTrace(); // Or handle the exception as you see fit
+            e.printStackTrace();
         }
     }
 

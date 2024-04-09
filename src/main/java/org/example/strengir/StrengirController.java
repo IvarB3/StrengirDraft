@@ -141,22 +141,20 @@ public class StrengirController {
     @FXML
     private void onInfo(ActionEvent event) {
         try {
-            // Load the FXML file for the umforrit-view
+            // Hleður inn umforrit-view
             FXMLLoader loader = new FXMLLoader(getClass().getResource("umforrit-view.fxml"));
             Parent umforritViewRoot = loader.load();
 
-            // Get the current stage (window) using the event's source
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-            // Optional: If you have specific setup to do with InfoController, you can do it here
-            // InfoController controller = loader.getController();
 
-            // Set the new scene on the current stage
+
+            // Breytir um senu
             Scene scene = new Scene(umforritViewRoot);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace(); // Or handle the exception as you see fit
+            e.printStackTrace();
         }
     }
 }
