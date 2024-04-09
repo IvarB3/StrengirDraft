@@ -11,11 +11,11 @@
             fx:controller="org.example.strengir.InfoController"
             prefHeight="400.0" prefWidth="600.0">
 
-    <Label text="How to Use the Project:" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
-    <Label text="1. " wrapText="true" />
-    <Label text="2. Navigate to the main screen to access the primary features." wrapText="true" />
-    <Label text="3. Select any of the features from the list to start using them." wrapText="true" />
-    <Label text="4. Follow on-screen instructions for each feature to utilize them effectively." wrapText="true" />
-    <Label text="5. Access the 'Help' section for detailed guides on each feature." wrapText="true" />
+    <Label text="Leiðbeiningar" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    <Label text="1. Skrifaðu þann texta sem að þú vilt vinna með í stóra texta reitinn og ýttu á 'Vista' " wrapText="true" />
+    <Label text="2. Til þess að telja ákveðið orð þá þarf að skrifa það niður í viðeigandi reit og ýta á 'Leita'" wrapText="true" />
+    <Label text="3. Ef að þú vilt highlighta orðið þá þarf að ýta á 'Sýna'" wrapText="true" />
+    <Label text="4. Til þess að breyta orði þá þarf fyrst að fylgja skrefum 1 og 2, skrifa nýja orðið í viðeigandi reit og ýta á 'Breyta'" wrapText="true" />
+    <Label text="5. Til þess að fá orðafjölda þá þarf að vista textan og ýta á 'Word Count'"/>
     <Button text="Close" onAction="#handleCloseButtonAction"/>
 </VBox>

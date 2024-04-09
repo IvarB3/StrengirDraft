@@ -1,12 +1,4 @@
 package org.example.strengir;
-/******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
- *  Viðmótsforritun 2024
- *
- *  Dialog modal til að fá nafn áskrifanda
- *
- *****************************************************************************/
 import vinnsla.Askrifandi;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +9,6 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-// AskrifandiDialog erfir frá Dialog<Askrifandi>
 public class AskrifandiDialog extends Dialog<Askrifandi> {
 
     // viðmótshlutur

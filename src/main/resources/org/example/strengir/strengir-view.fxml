@@ -11,7 +11,7 @@
     <HBox prefHeight="100.0" prefWidth="200.0">
         <children>
             <Button fx:id="fxAskrifandi" mnemonicParsing="false" onAction="#onLogin" text="Áskrifandi" />
-            <Button fx:id="fxInfo" text="Um forritið" onAction="#onInfo" />
+            <Button fx:id="fxInfo" text="Leiðbeiningar" onAction="#onInfo" />
 
             <!-- Spacer that expands to fill available width, pushing following nodes to the right -->
             <Pane HBox.hgrow="ALWAYS" />
