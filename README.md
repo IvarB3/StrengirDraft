@@ -7,6 +7,10 @@ Verkefnið ef framhald af verkefni 2 Strengir. Tilgangur forritsins er að hjál
 ## Uppsetning
 
 Java hlutinn er skipt í org.example.Strengir en þar má finna java kóðan fyrir viðmótið. Vinnslu pakkinn geymir java kóðan fyrir vinnsluna.
+Undir Resources er hægt að finna fxml skrárnar.
+
+## Keyrsla 
+Til þess að keyra forritið þarf notandi að vera með Maven, jdk 11 eða hærra, hægt er að klóna repoið yfir í Intellij opna Maven flipan, smella á plug ins og ýta á 'JavaFX run'
 
 ## Notkun
 
