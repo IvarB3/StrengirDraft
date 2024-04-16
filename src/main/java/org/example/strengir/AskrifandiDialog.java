@@ -36,14 +36,15 @@ public class AskrifandiDialog extends Dialog<Askrifandi> {
      */
     private void setResultConverter() {
         setResultConverter(b -> {                    // b er af taginu ButtonType - hér er lambda fall sem tekur inn b
-            if (b.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
-                askrifandi.setNafn(fxNafn.getText());   // ná í nafnið út dialog og setja í áskrifanda hlutinn
+            if (b.getButtonData() == ButtonBar.ButtonData.OK_DONE && !fxNafn.getText().trim().isEmpty()) {
+                askrifandi.setNafn(fxNafn.getText().trim());   // ná í nafnið út dialog, hreinsa bil og setja í áskrifanda hlutinn
                 return askrifandi;
             } else {
                 return null;
             }
-        });         // endir á d.setResultConverter
+        });         // endir á setResultConverter
     }
+
 
     /**
      * Lesa inn dialog pane úr .fxml skrá
