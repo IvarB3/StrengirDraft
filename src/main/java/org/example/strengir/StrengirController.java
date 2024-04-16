@@ -16,6 +16,7 @@ import vinnsla.Strengir;
 
 import java.io.IOException;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 
 public class StrengirController {
@@ -113,11 +114,18 @@ public class StrengirController {
     private String highlightText(String text, String searchWord) {
         final String highlightStart = "**"; // Start highlight
         final String highlightEnd = "**"; // End highlight
+        final String regex = "\\*\\*" + Pattern.quote(searchWord) + "\\*\\*";
 
-        String highlightedText = text.replaceAll(searchWord, highlightStart + searchWord + highlightEnd);
+        // Check if the word is already highlighted
+        if (Pattern.compile(regex).matcher(text).find()) {
+            return text;
+        }
+
+        String highlightedText = text.replaceAll(Pattern.quote(searchWord), highlightStart + searchWord + highlightEnd);
 
         return highlightedText;
     }
+
 
     @FXML
     private Label fxLblWordCount;
