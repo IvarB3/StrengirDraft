@@ -19,5 +19,9 @@
     <Label text="5. Til þess að fá orðafjölda þá þarf að vista textan og ýta á 'Word Count'"/>
     <Label text="6. Til þess að telja orðið sem að þú breyttir/leitaðir að þá þarf að ýta á 'Telja Orð'"/>
     <Label text="7. Til að skrá sig inn þarf að ýta á 'Áskrifandi' þá ætti að poppa upp log in flipi sem að fylla þarf í"/>
+    <Label text="Útskýringar:" style="-fx-font-weight: bold;"/>
+    <Label text="Refactor þýðir að breyta einu orði allstaðar yfir í annað"/>
+    <Label text="Þegar leitað er að orði þá kemur upp tala en þessi tala þýðir númer stafs í textanum sem að orðið kemur fyrst fyrir í"/>
+    <Label text="Fyrsti stafur í textanum er 0 svo kemur 1 svo 2 osfrv "/>
     <Button text="Close" onAction="#handleCloseButtonAction"/>
 </VBox>
